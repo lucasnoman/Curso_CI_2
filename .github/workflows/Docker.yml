@@ -17,3 +17,11 @@ jobs:
         with:
           username: lucasnoman
           password: ${{ secrets.PASSWORD_DOCKER_HUB }}
+
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v6.7.0
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: lucasnoman/alura-ci:latest${{github.ref_name}}
