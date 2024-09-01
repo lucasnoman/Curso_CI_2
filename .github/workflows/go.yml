@@ -46,7 +46,7 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.2.0-node20
         with:
-          name: api go
+          name: programa
           path: main
 
   docker:
